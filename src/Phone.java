@@ -41,7 +41,7 @@ public class Phone extends Product{
     public String toString(){
         return String.format("%sProduct Make: %s%n" +
                         "Product Model: %s%n" +
-                        "Product Storage in GB: %d%n"
+                        "Product Storage: %dGB%n"
                 ,super.toString(), this.make, this.model, this.storageGB);
     }
 
