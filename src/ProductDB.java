@@ -36,6 +36,15 @@ public class ProductDB {
             this.items.remove(p);
     }
 
+    public Product find(int id){
+
+        for(Product p : this.items){
+            if(p.getProductID() == id)
+                return p;
+        }
+        System.out.println("There is no product with this id.");
+        return null;
+    }
     //--------------------------
     //  EXTRA FUNCTIONALITY
     //--------------------------

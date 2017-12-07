@@ -5,20 +5,25 @@ public class Test {
         Phone p = Test.createPhone();
         TV t = Test.createTV();
 
-        ProductDB db = new ProductDB();
-        db.add(p);
-        db.add(t);
-        db.add(t);
+        ProductDB db1 = new ProductDB();
+        db1.add(p);
+        db1.add(t);
+        db1.add(t);
+
 
         //-------------- Test print()-------------------
 
         System.out.print("\n-------------- Test print()-------------------\n");
 
-        System.out.println(db.getItems().toString());
-        db.remove(t);
-        System.out.println(db.getItems().toString());
-        p.print();
-        t.print();
+        System.out.println(db1.getItems().toString());
+        db1.remove(t);
+        System.out.println(db1.getItems().toString());
+
+        System.out.print("\n-------------- Test find()-------------------\n");
+        System.out.println(db1.find(1));
+        System.out.println(db1.find(10));
+//        p.print();
+//        t.print();
     }
 
     private static Phone createPhone(){
@@ -41,7 +46,7 @@ public class Test {
        // t.setProductID(123);
         t.setMake("Sony");
         t.setScreenSize(32);
-        t.setType("LED");
+        t.setType();
         t.setIs3DCapable(false);
         return t;
     }
