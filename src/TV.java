@@ -26,7 +26,7 @@ public class TV extends Product{
         return type;
     }
 
-    public boolean isIs3DCapable() {
+    public boolean is3DCapable() {
         return is3DCapable;
     }
 
@@ -45,10 +45,10 @@ public class TV extends Product{
     public void setType() {
         Scanner in = new Scanner(System.in);
         int size = this.TVTYPES.length;
-        String menu = "Choose the TV type.";
+        String menu = "Choose the TV type:";
 
         for(int i=0; i<size; i++)
-            menu += String.format("%d.%s%n", i+1, this.TVTYPES[i]);
+            menu += String.format("%n%d.%s", i+1, this.TVTYPES[i]);
 
         int choice;
         boolean isValid;
@@ -58,6 +58,7 @@ public class TV extends Product{
             choice = -1;
             if(in.hasNextInt())
                 choice = in.nextInt() - 1;
+            in.nextLine();
             isValid = choice >= 0 && choice < size;
             if(!isValid)
                 System.out.println("Enter a valid entry.");

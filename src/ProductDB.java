@@ -45,8 +45,5 @@ public class ProductDB {
         System.out.println("There is no product with this id.");
         return null;
     }
-    //--------------------------
-    //  EXTRA FUNCTIONALITY
-    //--------------------------
     
 }
