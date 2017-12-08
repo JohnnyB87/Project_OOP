@@ -2,18 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f75ce7b5-3a89-4d80-8241-c9656b8d6ce7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Menu.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Menu.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Project_OOP/Phone.class" afterPath="$PROJECT_DIR$/out/production/Project_OOP/Phone.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Project_OOP/Product.class" afterPath="$PROJECT_DIR$/out/production/Project_OOP/Product.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Project_OOP/TV.class" afterPath="$PROJECT_DIR$/out/production/Project_OOP/TV.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Project_OOP/Test.class" afterPath="$PROJECT_DIR$/out/production/Project_OOP/Test.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Customer.java" afterPath="$PROJECT_DIR$/src/Customer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OrderDetails.java" afterPath="$PROJECT_DIR$/src/OrderDetails.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Phone.java" afterPath="$PROJECT_DIR$/src/Phone.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Product.java" afterPath="$PROJECT_DIR$/src/Product.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TV.java" afterPath="$PROJECT_DIR$/src/TV.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Test.java" afterPath="$PROJECT_DIR$/src/Test.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -116,7 +110,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Test.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Test.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Test.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="561">
@@ -125,27 +119,6 @@
                 <element signature="imports" expanded="true" />
                 <element signature="e#5035#5036#0" expanded="true" />
                 <element signature="e#5096#5097#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Menu.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Menu.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="41" lean-forward="true" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#runMenu#0;class#Menu#0" expanded="false" />
-                <element signature="method#createPhone#0;class#Menu#0" expanded="false" />
-                <element signature="method#getProduct#0;class#Menu#0" expanded="false" />
-                <element signature="method#orderProducts#0;class#Menu#0" expanded="false" />
-                <element signature="method#displayOrdders#0;class#Menu#0" expanded="false" />
-                <element signature="method#getValidInput#0;class#Menu#0" expanded="false" />
-                <element signature="method#getValidInput#1;class#Menu#0" expanded="false" />
-                <element signature="e#5589#5590#0" expanded="true" />
-                <element signature="e#5627#5628#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -366,7 +339,7 @@
       <workItem from="1510429541842" duration="2891000" />
       <workItem from="1512588835414" duration="607000" />
       <workItem from="1512673094617" duration="14966000" />
-      <workItem from="1512743372148" duration="11572000" />
+      <workItem from="1512743372148" duration="11601000" />
     </task>
     <task id="LOCAL-00001" summary="Start">
       <created>1510429633379</created>
@@ -403,11 +376,18 @@
       <option name="project" value="LOCAL" />
       <updated>1512688969664</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="created menu class">
+      <created>1512754981681</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1512754981681</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30036000" />
+    <option name="totallyTimeSpent" value="30065000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -453,7 +433,8 @@
     <MESSAGE value="added find()" />
     <MESSAGE value="Working deep list" />
     <MESSAGE value="tidied code" />
-    <option name="LAST_COMMIT_MESSAGE" value="tidied code" />
+    <MESSAGE value="created menu class" />
+    <option name="LAST_COMMIT_MESSAGE" value="created menu class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -850,6 +831,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Menu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="41" lean-forward="true" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Test.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
@@ -858,25 +847,6 @@
             <element signature="imports" expanded="true" />
             <element signature="e#5035#5036#0" expanded="true" />
             <element signature="e#5096#5097#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Menu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="41" lean-forward="true" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#runMenu#0;class#Menu#0" expanded="false" />
-            <element signature="method#createPhone#0;class#Menu#0" expanded="false" />
-            <element signature="method#getProduct#0;class#Menu#0" expanded="false" />
-            <element signature="method#orderProducts#0;class#Menu#0" expanded="false" />
-            <element signature="method#displayOrdders#0;class#Menu#0" expanded="false" />
-            <element signature="method#getValidInput#0;class#Menu#0" expanded="false" />
-            <element signature="method#getValidInput#1;class#Menu#0" expanded="false" />
-            <element signature="e#5589#5590#0" expanded="true" />
-            <element signature="e#5627#5628#0" expanded="true" />
           </folding>
         </state>
       </provider>
