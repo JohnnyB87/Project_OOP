@@ -100,6 +100,8 @@ public class Test {
         joe.print();
         alice.print();
 
+        orders.add(joe);
+        orders.add(alice);
         //--------------------------
         //      TEST MENU
         //--------------------------
@@ -133,6 +135,8 @@ public class Test {
                 in.nextLine();
             }while(!isValid);
 
+            System.out.println("---------------------------------");
+
             switch(choice){
                 case 1:
                     Phone p = createPhone();
@@ -149,13 +153,16 @@ public class Test {
                     orderProducts();
                     break;
                 case 5:
-                    displayOrdders();
+                    displayOrders();
                     break;
-                case 6: System.out.println("You decided to quit.");
+                case 6:
+                    System.out.println("You decided to quit.");
                     break;
-                default: System.out.println("Invalid choice");
+                default:
+                    System.out.println("Invalid choice");
                     break;
             }
+
         }while(choice != 6);
     }
 
@@ -225,14 +232,16 @@ public class Test {
         c.add(o);
     }
 
-    private static void displayOrdders(){
+    private static void displayOrders(){
         System.out.print("Enter customer name: ");
         String name = getValidInput("customer name");
         for(Customer c : orders){
             if(c.getName().equalsIgnoreCase(name)){
                 c.print();
+                return;
             }
         }
+        System.out.println("No customer with that name in database.");
     }
 
     private static String getValidInput(String name){

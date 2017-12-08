@@ -24,10 +24,6 @@ public class Order {
     //      SETTERS
     //-----------------------------
     public void setOd(ArrayList<OrderDetails> od) {
-//        for(OrderDetails ord : od){
-//            ord = new OrderDetails(ord.getProduct(),ord.getQuantity());
-//            this.od.add(ord);
-//        }
         this.od = od;
     }
 
