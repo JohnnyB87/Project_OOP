@@ -38,7 +38,7 @@ public class OrderDetails {
     //      METHODS
     //-----------------------------
     public String toString(){
-        String str = String.format("Product: %s %s, Quantity: %d%n",
+        String str = this.product == null ? "" : String.format("Product: %s %s, Quantity: %d%n",
                 this.product.getName(),this.product.getDescription(), this.quantity);
         return str;
     }

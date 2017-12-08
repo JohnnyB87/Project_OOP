@@ -46,18 +46,19 @@ public class Order {
         for(int j=0;j<size;j++)
             if(j==i)
                 return this.od.get(i);
-        return null;
+        System.out.println("ERROR: out of bounds.");
+        return new OrderDetails();
     }
 
     public String toString(){
         String str = "";
         for(OrderDetails o : this.od)
-            str += o.toString();
+            str = o == null ? str : str + o.toString();
 
         return str;
     }
 
     public void print() {
-        System.out.println(this.toString());
+        System.out.println(this == null ? "ERROR: NullPointerException":this.toString());
     }
 }

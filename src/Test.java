@@ -9,6 +9,10 @@ public class Test {
     private static ArrayList<Customer> orders = new ArrayList<>();
 
     public static void main(String [] args){
+
+        //--------------------------
+        //      CREATE DATABASE
+        //--------------------------
         Phone p1 = new Phone("Samsung S7","Phone",600,"Samsung","S7",32);
         Phone p2 = new Phone("Apple iPhone X","Phone",800,"Apple","X",32);
         Phone p3 = new Phone("Apple iPhone 6","Phone",500,"Apple","6",16);
@@ -32,16 +36,21 @@ public class Test {
 //        db2.add(p5);
 //        db2.add(t);
 
-        //-------------- Test print()-------------------
+        //--------------------------
+        //      TEST PRINT()
+        //--------------------------
 
         System.out.print("\n-------------- Test print()-------------------\n");
 
         System.out.println(db1.getItems().toString());
-        //db1.remove(t);
+        db1.remove(t2);
 //        System.out.println(db2.getItems().toString());
-//        p.print();
-//        t.print();
+        p1.print();
+        t1.print();
 
+        //--------------------------
+        //      TEST FIND()
+        //--------------------------
 
         System.out.print("\n-------------- Test find()-------------------\n");
         System.out.println(db1.find(1));
@@ -50,36 +59,50 @@ public class Test {
 //        System.out.println(db2.find(5));
 //        System.out.println(db2.find(6));
 
+        //--------------------------
+        //      TEST ORDER
+        //--------------------------
+        System.out.print("\n-------------- Test Order-------------------\n");
+        Order o1 = new Order();
+        o1.add(p1,3);
+        o1.add(p2,5);
 
-        System.out.print("\n-------------- Test Customer-------------------\n");
-
-        Order o = new Order();
-        o.add(p1,3);
-        o.add(p2,5);
-
+        o1.get(1).print();
+        o1.get(5).print();
 
         Order o2 = new Order();
         o2.add(p3,6);
         o2.add(p5,5);
 
+
+        //--------------------------
+        //      TEST CUSTOMER
+        //--------------------------
+
+        System.out.print("\n-------------- Test Customer-------------------\n");
+
         Customer joe = new Customer();
         joe.setName("Joe");
         joe.setAddress("Cork");
-        joe.add(o);
+        joe.add(o1);
         joe.add(o2);
         joe.print();
 
         System.out.println(joe.getLength());
 
-        o.add(t1,3);
+        o1.add(t1,3);
 
         Customer alice = new Customer();
         alice.setName("Alice");
         alice.setAddress("Dublin");
-        alice.add(o);
+        alice.add(o1);
 
         joe.print();
         alice.print();
+
+        //--------------------------
+        //      TEST MENU
+        //--------------------------
 
         System.out.print("\n-------------- Test menu-------------------\n");
         runMenu();
@@ -192,9 +215,11 @@ public class Test {
                 System.out.print("Enter quantity: ");
                 int quantity = (int) getValidInput();
                 Product p = db1.find(choice);
-                o.add(p,quantity);
+                if(p != null) {
+                    o.add(p, quantity);
+                    System.out.printf("You ordered: %d %s%n", quantity, p.getName());
+                }
 
-                System.out.printf("You ordered: %d %s%n" ,quantity, p.getName());
             }
         }
         c.add(o);
@@ -241,15 +266,4 @@ public class Test {
         return value;
     }
 
-    private static TV createTV(){
-        TV t = new TV();
-        t.setName("Sony");
-        t.setDescription("TV");
-        t.setPrice(600);
-        t.setMake("Sony");
-        t.setScreenSize(32);
-        t.setType("LED");
-        t.setIs3DCapable(false);
-        return t;
-    }
 }
