@@ -7,6 +7,19 @@ public class Phone extends Product{
     private int storageGB;
 
     //--------------------------
+    //  CONSTRUCTORS
+    //--------------------------
+    public Phone(){
+        super();
+    }
+
+    public Phone(String name, String description, double price, String make, String model, int storage){
+        super(name, description, price);
+        this.make = make;
+        this.model = model;
+        this.storageGB = storage;
+    }
+    //--------------------------
     //  GETTERS
     //--------------------------
     public String getMake() {

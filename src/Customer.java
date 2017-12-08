@@ -3,13 +3,13 @@ import java.util.ArrayList;
 public class Customer {
     private String name;
     private String address;
-    private ArrayList<Order> order;
+    private ArrayList<ArrayList<Order>> order;
 
     //-----------------------------
     //      CONSTRUCTORS
     //-----------------------------
     public Customer(){
-        this.order = new ArrayList<>();
+        this.order = new ArrayList<ArrayList<Order>>();
     }
     //-----------------------------
     //      GETTERS
@@ -22,7 +22,7 @@ public class Customer {
         return this.address;
     }
 
-    public ArrayList<Order> getOrder() {
+    public ArrayList<ArrayList<Order>> getOrder() {
         return this.order;
     }
 
@@ -37,32 +37,42 @@ public class Customer {
         this.address = address;
     }
 
-    public void setOrder(ArrayList<Order> order) {
-//        for(Order o : order){
-//            Order newO = new Order();
-//            newO = o;
-//            this.order.add(newO);
-//        }
+    public void setOrder(ArrayList<ArrayList<Order>> order) {
         this.order = order;
     }
 
     //-----------------------------
     //      METHODS
     //-----------------------------
+    public int getLength(){
+        int counter = 0;
+        for(ArrayList<Order> ao : this.order)
+            counter++;
+
+        return counter;
+    }
+
     public void add(Order o){
         int size = o.getOd().size();
+        ArrayList<Order> newOrder = new ArrayList<>();
         for(int i=0; i<size; i++){
             OrderDetails od = new OrderDetails(o.get(i).getProduct(),o.get(i).getQuantity());
             Order newO = new Order();
             newO.add(od.getProduct(), od.getQuantity());
-            this.order.add(newO);
+            newOrder.add(newO);
         }
+        this.order.add(newOrder);
     }
 
     public String toString(){
         String str = String.format("Name: %s%nAddress: %s%n",this.name,this.address);
-        for(Order o : this.order)
-            str += o.toString();
+        int count = 1;
+        for(ArrayList<Order> ao : this.order) {
+            str += "Order " + count++ + "\n";
+            for (Order o : ao) {
+                str += "  " + o.toString();
+            }
+        }
         return str;
     }
 

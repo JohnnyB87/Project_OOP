@@ -38,8 +38,8 @@ public class OrderDetails {
     //      METHODS
     //-----------------------------
     public String toString(){
-        String str = String.format("Product: %s Quantity: %d%n",
-                this.product.getName(), this.quantity);
+        String str = String.format("Product: %s %s, Quantity: %d%n",
+                this.product.getName(),this.product.getDescription(), this.quantity);
         return str;
     }
 

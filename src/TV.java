@@ -8,8 +8,23 @@ public class TV extends Product{
     private int screenSize;
     private String type;
     private boolean is3DCapable;
-    private final String[] TVTYPES = {"LED","Plasma","LCD"};
+    //private final String[] TVTYPES = {"LED","Plasma","LCD"};
 
+    //--------------------------
+    //  CONSTRUCTORS
+    //--------------------------
+
+    public TV(){
+        super();
+    }
+
+    public TV(String name, String description, double price, String make, int screenSize, String type, boolean is3dCapable){
+        super(name, description, price);
+        this.make = make;
+        this.screenSize = screenSize;
+        this.type = type;
+        this.is3DCapable = is3dCapable;
+    }
     //--------------------------
     //  GETTERS
     //--------------------------
@@ -42,29 +57,8 @@ public class TV extends Product{
         this.screenSize = screenSize;
     }
 
-    public void setType() {
-        Scanner in = new Scanner(System.in);
-        int size = this.TVTYPES.length;
-        String menu = "Choose the TV type:";
-
-        for(int i=0; i<size; i++)
-            menu += String.format("%n%d.%s", i+1, this.TVTYPES[i]);
-
-        int choice;
-        boolean isValid;
-
-        do{
-            System.out.println(menu);
-            choice = -1;
-            if(in.hasNextInt())
-                choice = in.nextInt() - 1;
-            in.nextLine();
-            isValid = choice >= 0 && choice < size;
-            if(!isValid)
-                System.out.println("Enter a valid entry.");
-        }while(!isValid);
-
-        this.type = this.TVTYPES[choice];
+    public void setType(String type){
+        this.type = type;
     }
 
     public void setIs3DCapable(boolean is3DCapable) {

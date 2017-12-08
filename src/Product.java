@@ -14,6 +14,7 @@ public class Product {
     public Product(){
         PRODUCTID = idCounter++;
     }
+
     public Product(String name, String description, double price){
         this.name = name;
         this.description = description;
